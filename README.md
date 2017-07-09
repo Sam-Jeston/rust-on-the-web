@@ -1,4 +1,4 @@
-# Rustacean Web
+# Rust On The Web
 
 A blog platform, written with rocket.rs, that will provide an example of how to create web applications in Rust.
 
