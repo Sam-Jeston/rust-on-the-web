@@ -53,7 +53,7 @@ export class App extends React.Component<any, {active: boolean}> {
               </div>
 
               <div className="navbar-end">
-                <a className="navbar-item" href="https://github.com/Sam-Jeston/rustacean-web" target="_blank">
+                <a className="navbar-item" href="https://github.com/Sam-Jeston/rust-on-the-web" target="_blank">
                   Github
                 </a>
               </div>
