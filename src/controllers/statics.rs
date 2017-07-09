@@ -23,6 +23,16 @@ fn admin() -> io::Result<NamedFile> {
     NamedFile::open("app/index.html")
 }
 
+#[get("/login")]
+fn login() -> io::Result<NamedFile> {
+    NamedFile::open("app/index.html")
+}
+
+#[get("/signup")]
+fn signup() -> io::Result<NamedFile> {
+    NamedFile::open("app/index.html")
+}
+
 #[get("/404")]
 fn four_oh_four() -> io::Result<NamedFile> {
     NamedFile::open("app/index.html")

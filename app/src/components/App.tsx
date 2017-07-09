@@ -10,6 +10,8 @@ import { Home } from './Home'
 import { About } from './About'
 import { Post } from './Post'
 import { Admin } from './Admin'
+import { Login } from './Login'
+import { Signup } from './Signup'
 import { NotFound } from './NotFound'
 const rustacean = require('../../public/rustacean.png')
 
@@ -56,6 +58,7 @@ export class App extends React.Component<any, {active: boolean}> {
                 <a className="navbar-item" href="https://github.com/Sam-Jeston/rust-on-the-web" target="_blank">
                   Github
                 </a>
+                <Link className="navbar-item" to="/login">Login</Link>
               </div>
             </div>
           </nav>
@@ -63,6 +66,8 @@ export class App extends React.Component<any, {active: boolean}> {
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
             <Route path="/admin" component={Admin}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/signup" component={Signup}/>
             <Route path="/posts/:id" component={Post}/>
             <Route path="/404" component={NotFound}/>
             <Redirect to="/404" />

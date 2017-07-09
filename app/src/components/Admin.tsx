@@ -61,7 +61,6 @@ export class Admin extends React.Component<any, any> {
             </p>
           </div>
           <ReactQuill theme="snow" modules={modules} name="body" value={this.state.body} onChange={this.handleBodyChange} />
-          <br />
           <input className="button is-primary" type="submit" value="Submit" onClick={this.createPost} onSubmit={this.createPost}/>
         </form>
       </div>

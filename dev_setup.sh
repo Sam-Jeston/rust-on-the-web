@@ -5,7 +5,4 @@ sleep 20
 DATABASE_URL=mysql://root@127.0.0.1:3306/rustacean_web diesel setup
 docker cp seed.sql mysql:/seed.sql
 docker exec -i mysql mysql -u root < seed.sql
-
-# This will make a prod version of the frontend for. Run npm start in another window for file watching
-cd app && npm run compile
-cargo run
+echo "Done!"

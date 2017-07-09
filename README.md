@@ -17,3 +17,10 @@ DATABASE_URL=mysql://root@127.0.0.1:3306/rustacean_web diesel migration redo
 
 Set rustup nightly in repo:
 rustup override set nightly
+
+For password hashing:
+https://github.com/inejge/pwhash
+
+For info on cookies:
+https://github.com/SergioBenitez/Rocket/issues/206
+https://api.rocket.rs/rocket/http/struct.Cookie.html

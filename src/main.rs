@@ -19,6 +19,8 @@ fn main() {
             controllers::statics::about,
             controllers::statics::post,
             controllers::statics::admin,
+            controllers::statics::login,
+            controllers::statics::signup,
             controllers::statics::four_oh_four,
             controllers::users::get_user,
             controllers::posts::get_posts,

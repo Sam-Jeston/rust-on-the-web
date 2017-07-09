@@ -10,3 +10,8 @@ interface PostDef {
 interface HomeState {
   posts: PostDef[]
 }
+
+interface AxiosData {
+  data: any
+  status: number
+}
