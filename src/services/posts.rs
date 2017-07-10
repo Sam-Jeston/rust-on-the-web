@@ -3,6 +3,7 @@ use diesel::prelude::*;
 use diesel::insert;
 use db;
 use std::vec::Vec;
+use helpers;
 
 pub fn get_posts() -> Vec<PostShort> {
     use db::schema::posts::dsl::*;
@@ -34,7 +35,15 @@ pub fn get_post(post_id: i64) -> Result<Post, String>  {
 pub fn create_post<'a>(new_post: &'a NewPost) -> () {
     use db::schema::posts;
     let connection = db::connection::establish_connection();
-    let _ = insert(new_post).into(posts::table).execute(&connection);
+    let constructed_post = ConstructedPost {
+        title: new_post.title.clone(),
+        caption: new_post.caption.clone(),
+        body: new_post.body.clone(),
+        created_at: helpers::current_time(),
+        updated_at: helpers::current_time()
+    };
+
+    let _ = insert(&constructed_post).into(posts::table).execute(&connection);
     // Again this is a mysql downfall, lines should work...
     // .get_result(&connection)
     // .expect("Error saving new post")

@@ -50,12 +50,19 @@ pub struct PostShort {
     pub title: String,
     pub caption: String,
     pub created_at: String,
-    pub updated_at: String,
+    pub updated_at: String
+}
+
+#[derive(Queryable, Serialize, Deserialize,  Debug, Clone)]
+pub struct NewPost {
+    pub title: String,
+    pub caption: String,
+    pub body: String
 }
 
 #[derive(Insertable, Deserialize)]
 #[table_name="posts"]
-pub struct NewPost {
+pub struct ConstructedPost {
     pub title: String,
     pub caption: String,
     pub body: String,
