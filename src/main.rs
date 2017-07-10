@@ -7,10 +7,13 @@
 extern crate serde_json;
 extern crate dotenv;
 extern crate rocket;
+extern crate pwhash;
+extern crate chrono;
 
 mod db;
 mod controllers;
 mod services;
+mod helpers;
 
 fn main() {
     rocket::ignite()
@@ -23,6 +26,7 @@ fn main() {
             controllers::statics::signup,
             controllers::statics::four_oh_four,
             controllers::users::get_user,
+            controllers::users::register,
             controllers::posts::get_posts,
             controllers::posts::get_post,
             controllers::posts::create_post,

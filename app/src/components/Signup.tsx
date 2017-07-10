@@ -33,7 +33,7 @@ export class Signup extends React.Component<any, {
       return
     }
 
-    return signup(this.state.username, this.state.password)
+    return signup(this.state.username, this.state.password, this.state.confirmPassword)
   }
 
   public handleInputChange(event: any) {

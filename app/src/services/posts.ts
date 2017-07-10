@@ -12,8 +12,6 @@ export function createPost(title: string, caption: string, body: string) {
   return axios.post(`/post`, {
     title,
     caption,
-    body,
-    created_at: new Date(),
-    updated_at: new Date()
+    body
   })
 }
