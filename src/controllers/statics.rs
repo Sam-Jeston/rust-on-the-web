@@ -1,4 +1,4 @@
-use rocket_contrib::{JSON, Value};
+use rocket_contrib::{Json, Value};
 use std::io;
 use std::path::{Path, PathBuf};
 use rocket::response::NamedFile;
@@ -44,8 +44,8 @@ fn dist_files(file: PathBuf) -> Option<NamedFile> {
 }
 
 #[error(404)]
-fn not_found() -> JSON<Value> {
-    JSON(json!({
+fn not_found() -> Json<Value> {
+    Json(json!({
         "status": "error",
         "reason": "Resource was not found."
     }))

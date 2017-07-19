@@ -25,6 +25,12 @@ pub struct NewUser {
     pub confirm_password: String
 }
 
+#[derive(Queryable, Serialize, Deserialize,  Debug, Clone)]
+pub struct UserLogin {
+    pub username: String,
+    pub password: String
+}
+
 #[derive(Insertable, Deserialize)]
 #[table_name="users"]
 pub struct ConstructedUser {

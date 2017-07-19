@@ -4,6 +4,9 @@ A blog platform, written with rocket.rs, that will provide an example of how to 
 
 ## Helpful commands
 
+Update Rust:
+rustup update && cargo update
+
 Local DB:
 docker run --name mysql --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=true -p 3306:3306 -d mysql
 

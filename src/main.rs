@@ -27,6 +27,7 @@ fn main() {
             controllers::statics::four_oh_four,
             controllers::users::get_user,
             controllers::users::register,
+            controllers::users::login,
             controllers::posts::get_posts,
             controllers::posts::get_post,
             controllers::posts::create_post,
